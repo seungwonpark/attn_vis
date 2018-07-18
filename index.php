@@ -190,9 +190,24 @@ and available here:
         .text("a simple tooltip");
     gtooltip = tooltip // global
   }
+  Number.prototype.pad = function(size) {
+    var s = String(this);
+    while (s.length < (size || 2)) {s = "0" + s;}
+    return s;
+  }
+  function choosejson(x){
+    json_fname = "attn_vis_data_" + (x).pad(4) + ".json";
+    start();
+  }
 
   </script>
   </head>
+  <?php
+    for($i=1; $i<=100; $i++){
+      echo '<button onClick="choosejson('.$i.')">'.$i.'</button>';
+    }
+  ?>
+  
   <body onload="start();">
     <div id="wrap">
       <div id="curr_datafile">
