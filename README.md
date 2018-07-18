@@ -1,5 +1,7 @@
 # Attention Visualizer
 
+![](screenshot.png)
+
 This is a tool to visualize the distribution of attention in a text-based sequence-to-sequence task such as summarization. As you hover your mouse over the decoded words, the tool shows a heatmap of attention over the source words. A demo can be seen [here](http://www.abigailsee.com/2017/04/16/taming-rnns-for-better-summarization.html) (scroll down to "Example Output" section).
 
 Additionally, for pointer-generator networks such as that described in [this paper](https://arxiv.org/abs/1704.04368), the tool displays the _generation probability_ of each decoded word. This tool was designed to work with the [Tensorflow code](https://github.com/abisee/pointer-generator) for the paper.
